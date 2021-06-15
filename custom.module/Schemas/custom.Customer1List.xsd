@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema elementFormDefault="qualified" version="1.0" targetNamespace="www.tibco.com/plugin/java/xmlSchema/custom.Customer1List" xmlns:tns="www.tibco.com/plugin/java/xmlSchema/custom.Customer1List" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="CustAddress1" type="tns:CustAddress1Type"/>
+
+  <xs:element name="CustPhone1" type="tns:CustPhone1Type"/>
+
+  <xs:element name="Customer1" type="tns:Customer1Type"/>
+
+  <xs:element name="Customer1List" type="tns:Customer1ListType"/>
+
+  <xs:complexType name="Customer1ListType">
+    <xs:sequence>
+      <xs:element name="_customer1list" type="tns:Customer1Type" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Customer1Type">
+    <xs:sequence>
+      <xs:element name="_addresslist" type="tns:CustAddress1Type" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="_customer_id" type="xs:long" minOccurs="0"/>
+      <xs:element name="_customer_no" type="xs:string" minOccurs="0"/>
+      <xs:element name="_opcode" type="xs:int" minOccurs="0"/>
+      <xs:element name="_phonelist" type="tns:CustPhone1Type" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CustAddress1Type">
+    <xs:sequence>
+      <xs:element name="_address_id" type="xs:long" minOccurs="0"/>
+      <xs:element name="_addresstype" type="xs:string" minOccurs="0"/>
+      <xs:element name="_opcode" type="xs:int" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CustPhone1Type">
+    <xs:sequence>
+      <xs:element name="_opcode" type="xs:int" minOccurs="0"/>
+      <xs:element name="_phone_id" type="xs:long" minOccurs="0"/>
+      <xs:element name="_phonetype" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

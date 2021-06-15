@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adbplugin="http://ns.tibco.com/bw/sharedresource/adbplugin" xmlns:jdbc="http://xsd.tns.tibco.com/amf/models/sharedresource/jdbc" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_oC6ukLqGEeu415ynOkl6Fw" name="custom.module.ADBConfigurationResource" type="adbplugin:ADBPluginConnection">
+  <jndi:reference xmi:id="_oC_AALqGEeu415ynOkl6Fw" key="jdbcconncetion" type="jdbc:JdbcDataSource" value="custom.module.JDBCConnectionResource"/>
+  <jndi:configuration xsi:type="adbplugin:ADBPluginConnection" xmi:id="_oC_AAbqGEeu415ynOkl6Fw" uuid="16662985-6b52-4b39-b945-6da159fe57de">
+    <substitutionBindings xmi:id="_5LPhcLqGEeu415ynOkl6Fw" template="defaultSchema" propName="/Database/Schema"/>
+    <eventPoller xmi:id="_oDDRcLqGEeu415ynOkl6Fw" name="DBPoller" allowKeys="false" dummyNode="true"/>
+    <eventPoller xmi:id="_ryGmALqaEeumbMEax9uHHw" name="DBPoller1" publishingTable="P_CUSTOMER" uuid="1b43a67d-13c9-40b2-8532-393eea0a3d32">
+      <table xmi:id="_xahAALqaEeumbMEax9uHHw" name="CUSTOMER">
+        <tableConfiguration xmi:id="_xahAAbqaEeumbMEax9uHHw" name="CUSTOMER">
+          <rows xmi:id="_xahAArqaEeumbMEax9uHHw" name="CUSTOMER_ID" type="double" userKey="true" tableName="CUSTOMER" use="true" dbType="NUMBER" primaryKey="true"/>
+          <rows xmi:id="_xahAA7qaEeumbMEax9uHHw" name="CUSTOMER_NO" type="string" updateTrigger="true" tableName="CUSTOMER" use="true" dbType="VARCHAR2"/>
+          <rows xmi:id="_xahABLqaEeumbMEax9uHHw" name="FIRST_NAME" type="string" updateTrigger="true" tableName="CUSTOMER" use="true" dbType="VARCHAR2"/>
+          <rows xmi:id="_xahABbqaEeumbMEax9uHHw" name="LAST_NAME" type="string" updateTrigger="true" tableName="CUSTOMER" use="true" dbType="VARCHAR2"/>
+          <child xmi:id="_MMHaQLqbEeumbMEax9uHHw" name="CUSTPHONE">
+            <rows xmi:id="_MMHaQbqbEeumbMEax9uHHw" name="PHONE_ID" type="double" userKey="true" tableName="CUSTPHONE" dbType="NUMBER" childTable="true" primaryKey="true"/>
+            <rows xmi:id="_MMIBULqbEeumbMEax9uHHw" name="PHONE_TYPE" type="string" joinTo="" userKey="true" tableName="CUSTPHONE" use="true" dbType="VARCHAR2" childTable="true"/>
+            <rows xmi:id="_MMIBUbqbEeumbMEax9uHHw" name="PHONE_NUMBER" type="string" tableName="CUSTPHONE" use="true" dbType="VARCHAR2" childTable="true"/>
+            <rows xmi:id="_MMIBUrqbEeumbMEax9uHHw" name="CUSTOMER_ID" type="double" joinTo="CUSTOMER.CUSTOMER_ID" userKey="true" tableName="CUSTPHONE" use="true" dbType="NUMBER" childTable="true"/>
+          </child>
+          <child xmi:id="_L57ooLqcEeumbMEax9uHHw" name="CUSTADDRESS">
+            <rows xmi:id="_L58PsLqcEeumbMEax9uHHw" name="ADDRESS_ID" type="double" userKey="true" tableName="CUSTADDRESS" dbType="NUMBER" childTable="true" primaryKey="true"/>
+            <rows xmi:id="_L58PsbqcEeumbMEax9uHHw" name="ADDRESS_TYPE" type="string" joinTo="" userKey="true" tableName="CUSTADDRESS" use="true" dbType="VARCHAR2" childTable="true"/>
+            <rows xmi:id="_L58PsrqcEeumbMEax9uHHw" name="STREET_NO" type="string" tableName="CUSTADDRESS" use="true" dbType="VARCHAR2" childTable="true"/>
+            <rows xmi:id="_L58Ps7qcEeumbMEax9uHHw" name="STREET" type="string" tableName="CUSTADDRESS" use="true" dbType="VARCHAR2" childTable="true"/>
+            <rows xmi:id="_L58PtLqcEeumbMEax9uHHw" name="CITY" type="string" tableName="CUSTADDRESS" use="true" dbType="VARCHAR2" childTable="true"/>
+            <rows xmi:id="_L58PtbqcEeumbMEax9uHHw" name="STATE" type="string" tableName="CUSTADDRESS" use="true" dbType="VARCHAR2" childTable="true"/>
+            <rows xmi:id="_L58PtrqcEeumbMEax9uHHw" name="ZIP" type="string" tableName="CUSTADDRESS" use="true" dbType="VARCHAR2" childTable="true"/>
+            <rows xmi:id="_L58Pt7qcEeumbMEax9uHHw" name="CUSTOMER_ID" type="double" joinTo="CUSTOMER.CUSTOMER_ID" userKey="true" tableName="CUSTADDRESS" use="true" dbType="NUMBER" childTable="true"/>
+          </child>
+        </tableConfiguration>
+      </table>
+    </eventPoller>
+    <dbMerger xmi:id="_oDDRcbqGEeu415ynOkl6Fw" name="DBMerger" dummyNode="true"/>
+    <dbMerger xmi:id="_k91K8LqcEeumbMEax9uHHw" name="DBMerger1" uuid="256b5951-d825-486b-a327-1766579c0fad">
+      <table xmi:id="_pKh04LqcEeumbMEax9uHHw" name="CUSTOMER1">
+        <tableConfiguration xmi:id="_pKh04bqcEeumbMEax9uHHw" name="CUSTOMER1">
+          <rows xmi:id="_pKh04rqcEeumbMEax9uHHw" name="CUSTOMER_ID" type="double" userKey="true" tableName="CUSTOMER1" use="true" dbType="NUMBER" primaryKey="true"/>
+          <rows xmi:id="_pKh047qcEeumbMEax9uHHw" name="CUSTOMER_NO" type="string" tableName="CUSTOMER1" use="true" dbType="VARCHAR2"/>
+          <rows xmi:id="_pKh05LqcEeumbMEax9uHHw" name="FIRST_NAME" type="string" tableName="CUSTOMER1" use="true" dbType="VARCHAR2"/>
+          <rows xmi:id="_pKh05bqcEeumbMEax9uHHw" name="LAST_NAME" type="string" tableName="CUSTOMER1" use="true" dbType="VARCHAR2"/>
+          <child xmi:id="_sYipALqcEeumbMEax9uHHw" name="CUSTPHONE1">
+            <rows xmi:id="_sYjQELqcEeumbMEax9uHHw" name="PHONE_ID" type="double" joinTo="" userKey="true" tableName="CUSTPHONE1" use="true" dbType="NUMBER" childTable="true" primaryKey="true"/>
+            <rows xmi:id="_sYjQEbqcEeumbMEax9uHHw" name="PHONE_TYPE" type="string" tableName="CUSTPHONE1" use="true" dbType="VARCHAR2" childTable="true"/>
+            <rows xmi:id="_sYjQErqcEeumbMEax9uHHw" name="PHONE_NUMBER" type="string" tableName="CUSTPHONE1" use="true" dbType="VARCHAR2" childTable="true"/>
+            <rows xmi:id="_sYjQE7qcEeumbMEax9uHHw" name="CUSTOMER_ID" type="double" joinTo="CUSTOMER1.CUSTOMER_ID" tableName="CUSTPHONE1" use="true" dbType="NUMBER" childTable="true"/>
+          </child>
+          <child xmi:id="_yRTzMLqcEeumbMEax9uHHw" name="CUSTADDRESS1">
+            <rows xmi:id="_yRUaQLqcEeumbMEax9uHHw" name="ADDRESS_ID" type="double" joinTo="" userKey="true" tableName="CUSTADDRESS1" use="true" dbType="NUMBER" childTable="true" primaryKey="true"/>
+            <rows xmi:id="_yRUaQbqcEeumbMEax9uHHw" name="ADDRESS_TYPE" type="string" tableName="CUSTADDRESS1" use="true" dbType="VARCHAR2" childTable="true"/>
+            <rows xmi:id="_yRUaQrqcEeumbMEax9uHHw" name="STREET_NO" type="string" tableName="CUSTADDRESS1" use="true" dbType="VARCHAR2" childTable="true"/>
+            <rows xmi:id="_yRUaQ7qcEeumbMEax9uHHw" name="STREET" type="string" tableName="CUSTADDRESS1" use="true" dbType="VARCHAR2" childTable="true"/>
+            <rows xmi:id="_yRUaRLqcEeumbMEax9uHHw" name="CITY" type="string" tableName="CUSTADDRESS1" use="true" dbType="VARCHAR2" childTable="true"/>
+            <rows xmi:id="_yRUaRbqcEeumbMEax9uHHw" name="STATE" type="string" tableName="CUSTADDRESS1" use="true" dbType="VARCHAR2" childTable="true"/>
+            <rows xmi:id="_yRUaRrqcEeumbMEax9uHHw" name="ZIP" type="string" tableName="CUSTADDRESS1" use="true" dbType="VARCHAR2" childTable="true"/>
+            <rows xmi:id="_yRUaR7qcEeumbMEax9uHHw" name="CUSTOMER_ID" type="double" joinTo="CUSTOMER1.CUSTOMER_ID" tableName="CUSTADDRESS1" use="true" dbType="NUMBER" childTable="true"/>
+          </child>
+        </tableConfiguration>
+      </table>
+    </dbMerger>
+    <dbRequester xmi:id="_oDDRcrqGEeu415ynOkl6Fw" dummyNode="true" name="DBRequester"/>
+  </jndi:configuration>
+</jndi:namedResource>

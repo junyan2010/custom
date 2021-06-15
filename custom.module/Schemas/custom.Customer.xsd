@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema elementFormDefault="qualified" version="1.0" targetNamespace="www.tibco.com/plugin/java/xmlSchema/custom.Customer" xmlns:tns="www.tibco.com/plugin/java/xmlSchema/custom.Customer" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Customer" type="tns:CustomerType"/>
+
+  <xs:complexType name="CustomerType">
+    <xs:sequence>
+      <xs:element name="_addresstypelist" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="_customer_no" type="xs:string" minOccurs="0"/>
+      <xs:element name="_opcode" type="xs:int" minOccurs="0"/>
+      <xs:element name="_phonetypelist" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

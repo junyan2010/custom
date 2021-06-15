@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema elementFormDefault="qualified" version="1.0" targetNamespace="www.tibco.com/plugin/java/xmlSchema/custom.CustAddress1" xmlns:tns="www.tibco.com/plugin/java/xmlSchema/custom.CustAddress1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="CustAddress1" type="tns:CustAddress1Type"/>
+
+  <xs:complexType name="CustAddress1Type">
+    <xs:sequence>
+      <xs:element name="_address_id" type="xs:long" minOccurs="0"/>
+      <xs:element name="_addresstype" type="xs:string" minOccurs="0"/>
+      <xs:element name="_opcode" type="xs:int" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

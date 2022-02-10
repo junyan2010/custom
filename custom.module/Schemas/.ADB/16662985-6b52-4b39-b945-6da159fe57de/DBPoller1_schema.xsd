@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns:tns="http://www.tibco.com/xmlns/adb/16662985-6b52-4b39-b945-6da159fe57de1b43a67d-13c9-40b2-8532-393eea0a3d32_schema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.tibco.com/xmlns/adb/16662985-6b52-4b39-b945-6da159fe57de1b43a67d-13c9-40b2-8532-393eea0a3d32_schema" xmlns="http://www.w3.org/2001/XMLSchema">
+    <element name="P__CUSTOMER" type="tns:P__CUSTOMER_Type"/>
+    <complexType name="ADB_SEQUENCE_CUSTPHONE_Type">
+        <sequence>
+            <element maxOccurs="unbounded" minOccurs="0" name="item" type="tns:CUSTPHONE"/>
+        </sequence>
+    </complexType>
+    <complexType name="CUSTPHONE">
+        <all>
+            <element minOccurs="0" name="PHONE__TYPE" nillable="true" type="string"/>
+            <element minOccurs="0" name="PHONE__NUMBER" nillable="true" type="string"/>
+            <element minOccurs="0" name="CUSTOMER__ID" nillable="true" type="double"/>
+            <element minOccurs="0" name="ADB__OPCODE" nillable="true" type="int"/>
+        </all>
+    </complexType>
+    <complexType name="ADB_SEQUENCE_CUSTADDRESS_Type">
+        <sequence>
+            <element maxOccurs="unbounded" minOccurs="0" name="item" type="tns:CUSTADDRESS"/>
+        </sequence>
+    </complexType>
+    <complexType name="CUSTADDRESS">
+        <all>
+            <element minOccurs="0" name="ADDRESS__TYPE" nillable="true" type="string"/>
+            <element minOccurs="0" name="STREET__NO" nillable="true" type="string"/>
+            <element minOccurs="0" name="STREET" nillable="true" type="string"/>
+            <element minOccurs="0" name="CITY" nillable="true" type="string"/>
+            <element minOccurs="0" name="STATE" nillable="true" type="string"/>
+            <element minOccurs="0" name="ZIP" nillable="true" type="string"/>
+            <element minOccurs="0" name="CUSTOMER__ID" nillable="true" type="double"/>
+            <element minOccurs="0" name="ADB__OPCODE" nillable="true" type="int"/>
+        </all>
+    </complexType>
+    <complexType name="P__CUSTOMER_Type">
+        <all>
+            <element minOccurs="0" name="CUSTOMER__ID" nillable="true" type="double"/>
+            <element minOccurs="0" name="CUSTOMER__NO" nillable="true" type="string"/>
+            <element minOccurs="0" name="FIRST__NAME" nillable="true" type="string"/>
+            <element minOccurs="0" name="LAST__NAME" nillable="true" type="string"/>
+            <element minOccurs="0" name="ADB__OPCODE" nillable="true" type="int"/>
+            <element minOccurs="0" name="ADB__SEQUENCE" nillable="true" type="string"/>
+            <element minOccurs="0" name="ADB__TIMESTAMP" nillable="true" type="string"/>
+            <element minOccurs="0" name="ADB__REF__OBJECT" nillable="true" type="string"/>
+            <element minOccurs="0" name="ADB__SEQUENCE__CUSTPHONE" nillable="true" type="tns:ADB_SEQUENCE_CUSTPHONE_Type"/>
+            <element minOccurs="0" name="ADB__SEQUENCE__CUSTADDRESS" nillable="true" type="tns:ADB_SEQUENCE_CUSTADDRESS_Type"/>
+        </all>
+    </complexType>
+</schema>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns:sub="http://www.tibco.com/xmlns/adb/16662985-6b52-4b39-b945-6da159fe57de1b43a67d-13c9-40b2-8532-393eea0a3d32_schema" xmlns:tns="http://www.tibco.com/xmlns/adb/16662985-6b52-4b39-b945-6da159fe57de1b43a67d-13c9-40b2-8532-393eea0a3d32" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.tibco.com/xmlns/adb/16662985-6b52-4b39-b945-6da159fe57de1b43a67d-13c9-40b2-8532-393eea0a3d32" xmlns="http://www.w3.org/2001/XMLSchema">
+    <import namespace="http://www.tibco.com/xmlns/adb/16662985-6b52-4b39-b945-6da159fe57de1b43a67d-13c9-40b2-8532-393eea0a3d32_schema" schemaLocation="DBPoller1_schema.xsd"/>
+    <element name="ActivityOutput" type="tns:ActivityOutput_Type"/>
+    <complexType name="ActivityOutput_Type">
+        <sequence>
+            <element minOccurs="0" name="body" type="tns:body_Type"/>
+        </sequence>
+    </complexType>
+    <complexType name="body_Type">
+        <choice>
+            <element maxOccurs="unbounded" minOccurs="0" name="P__CUSTOMER" type="sub:P__CUSTOMER_Type"/>
+        </choice>
+    </complexType>
+</schema>

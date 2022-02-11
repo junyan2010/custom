@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<annox:class xmlns:annox="http://annox.dev.java.net" xmlns:jaxb="http://annox.dev.java.net/javax.xml.bind.annotation" name="CustomerList">
+  <jaxb:XmlAccessorType value="NONE"/>
+  <jaxb:XmlType name="CustomerListType" propOrder="_customerlist "/>
+  <jaxb:XmlRootElement name="CustomerList" namespace="www.tibco.com/plugin/java/xmlSchema/custom.CustomerList"/>
+  <annox:field name="_customerlist">
+    <jaxb:XmlElement name="_customerlist" namespace="www.tibco.com/plugin/java/xmlSchema/custom.CustomerList"/>
+  </annox:field>
+</annox:class>

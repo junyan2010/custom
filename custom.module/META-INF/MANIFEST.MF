@@ -5,6 +5,7 @@ Bundle-SymbolicName: custom.module
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .annoxfiles/,lib/ojdbc8.jar,.
 Bundle-Vendor: TIBCO Software Inc.
+Export-Package: custom
 Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
  com.tibco.bw.palette; filter:="(name=bw.generalactivities)",
  com.tibco.bw.palette; filter:="(name=bw.adbplugin)",
@@ -16,7 +17,8 @@ Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
  com.tibco.bw.sharedresource.model; filter:="(name=bw.jmsconnection)",
  com.tibco.bw.sharedresource.model; filter:="(name=bw.jndiconfiguration)"
 TIBCO-BW-Version: 6.4.1 V22 2017-08-17
-Import-Package: com.tibco.security;version="2.18.303"
+Import-Package: com.tibco.security;version="2.18.303",
+ custom
 TIBCO-BW-ApplicationModule: META-INF/module.bwm
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 TIBCO-BW-ConfigProfile: META-INF/default.substvar

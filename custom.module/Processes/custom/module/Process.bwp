@@ -284,29 +284,6 @@
             <element name="JavaToXmlActivityOutput" type="tns:MutTypeJavaToXmlOutputRoot"/>
         </schema>
         <xs:schema elementFormDefault="qualified"
-            targetNamespace="www.tibco.com/plugin/java/xmlSchema/custom.CustomerList"
-            version="1.0"
-            xmlns:tns="www.tibco.com/plugin/java/xmlSchema/custom.CustomerList" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-            <xs:element name="Customer" type="tns:CustomerType"/>
-            <xs:element name="CustomerList" type="tns:CustomerListType"/>
-            <xs:complexType name="CustomerListType">
-                <xs:sequence>
-                    <xs:element maxOccurs="unbounded" minOccurs="0"
-                        name="_customerlist" type="tns:CustomerType"/>
-                </xs:sequence>
-            </xs:complexType>
-            <xs:complexType name="CustomerType">
-                <xs:sequence>
-                    <xs:element maxOccurs="unbounded" minOccurs="0"
-                        name="_addresstypelist" type="xs:string"/>
-                    <xs:element minOccurs="0" name="_customer_no" type="xs:string"/>
-                    <xs:element minOccurs="0" name="_opcode" type="xs:int"/>
-                    <xs:element maxOccurs="unbounded" minOccurs="0"
-                        name="_phonetypelist" type="xs:string"/>
-                </xs:sequence>
-            </xs:complexType>
-        </xs:schema>
-        <xs:schema elementFormDefault="qualified"
             targetNamespace="www.tibco.com/plugin/java/xmlSchema/custom.Customer1List"
             version="1.0"
             xmlns:tns="www.tibco.com/plugin/java/xmlSchema/custom.Customer1List" xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -343,6 +320,29 @@
                     <xs:element minOccurs="0" name="_opcode" type="xs:int"/>
                     <xs:element minOccurs="0" name="_phone_id" type="xs:long"/>
                     <xs:element minOccurs="0" name="_phonetype" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema elementFormDefault="qualified"
+            targetNamespace="www.tibco.com/plugin/java/xmlSchema/custom.CustomerList"
+            version="1.0"
+            xmlns:tns="www.tibco.com/plugin/java/xmlSchema/custom.CustomerList" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:element name="Customer" type="tns:CustomerType"/>
+            <xs:element name="CustomerList" type="tns:CustomerListType"/>
+            <xs:complexType name="CustomerListType">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                        name="_customerlist" type="tns:CustomerType"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="CustomerType">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                        name="_addresstypelist" type="xs:string"/>
+                    <xs:element minOccurs="0" name="_customer_no" type="xs:string"/>
+                    <xs:element minOccurs="0" name="_opcode" type="xs:int"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                        name="_phonetypelist" type="xs:string"/>
                 </xs:sequence>
             </xs:complexType>
         </xs:schema>

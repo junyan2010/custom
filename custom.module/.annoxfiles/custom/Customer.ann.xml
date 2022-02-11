@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<annox:class xmlns:annox="http://annox.dev.java.net" xmlns:jaxb="http://annox.dev.java.net/javax.xml.bind.annotation" name="Customer">
+  <jaxb:XmlAccessorType value="NONE"/>
+  <jaxb:XmlType name="CustomerType" propOrder="_addresstypelist _customer_no _opcode _phonetypelist "/>
+  <jaxb:XmlRootElement name="Customer" namespace="www.tibco.com/plugin/java/xmlSchema/custom.CustomerList"/>
+  <annox:field name="_addresstypelist">
+    <jaxb:XmlElement name="_addresstypelist" namespace="www.tibco.com/plugin/java/xmlSchema/custom.CustomerList"/>
+  </annox:field>
+  <annox:field name="_customer_no">
+    <jaxb:XmlElement name="_customer_no" namespace="www.tibco.com/plugin/java/xmlSchema/custom.CustomerList"/>
+  </annox:field>
+  <annox:field name="_opcode">
+    <jaxb:XmlElement name="_opcode" namespace="www.tibco.com/plugin/java/xmlSchema/custom.CustomerList" required="false" type="java.lang.Integer"/>
+  </annox:field>
+  <annox:field name="_phonetypelist">
+    <jaxb:XmlElement name="_phonetypelist" namespace="www.tibco.com/plugin/java/xmlSchema/custom.CustomerList"/>
+  </annox:field>
+</annox:class>
